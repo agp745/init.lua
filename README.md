@@ -22,3 +22,8 @@
 - [Mason](https://github.com/williamboman/mason.nvim)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+
+### Linting 
+
+- [none-ls](https://github.com/nvimtools/none-ls.nvim)
+
