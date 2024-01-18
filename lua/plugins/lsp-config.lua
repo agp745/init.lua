@@ -11,7 +11,7 @@ return {
     lazy = false,
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "gopls", "marksman" },
+        ensure_installed = { "lua_ls", "tsserver", "gopls", "marksman", "tailwindcss" },
         automatic_installation = true,
       })
     end,
@@ -34,6 +34,9 @@ return {
       })
       lspconfig.marksman.setup({
         capabilites = capabilities,
+      })
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities,
       })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
