@@ -25,7 +25,7 @@ return {
 				null_ls.builtins.formatting.stylua,
 				-- Javascript
 				null_ls.builtins.formatting.prettierd,
-				null_ls.builtins.diagnostics.eslint_d,
+				-- null_ls.builtins.diagnostics.eslint_d,
 				-- Go
 				null_ls.builtins.formatting.gofumpt,
 				-- C / C++
