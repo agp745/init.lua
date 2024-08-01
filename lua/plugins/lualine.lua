@@ -5,7 +5,22 @@ return {
 		require("lualine").setup({
 			options = {
 				theme = "catppuccin",
-				--theme = 'ayu_mirage'
+				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
+			},
+			sections = {
+				lualine_a = { "mode" },
+				lualine_b = { "" },
+				lualine_c = { "" },
+				lualine_x = { "buffers" },
+				lualine_y = {
+					{
+						"diagnostics",
+						sources = { "nvim_diagnostic", "nvim_lsp", "coc" },
+						update_in_insert = true,
+					},
+				},
+				lualine_z = { "location" },
 			},
 		})
 	end,

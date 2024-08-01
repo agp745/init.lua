@@ -29,7 +29,7 @@ return {
 				-- Go
 				null_ls.builtins.formatting.gofumpt,
 				-- Templ
-				null_ls.builtins.formatting.templ,
+				-- null_ls.builtins.formatting.templ,
 				-- C / C++
 				null_ls.builtins.formatting.clang_format,
 			},
