@@ -5,7 +5,12 @@ return {
       local cmp = require("cmp")
       local lspkind = require("lspkind")
       local luasnip = require("luasnip")
-      require("luasnip.loaders.from_vscode").lazy_load()
+
+      -- loaders: vscode, lua, snipmate
+      -- I really do not know the difference
+      require("luasnip.loaders.from_lua").lazy_load({
+        exclude = { "markdown" },
+      })
 
       cmp.setup({
         view = {
@@ -28,7 +33,6 @@ return {
           -- REQUIRED - you must specify a snippet engine
           expand = function(args)
             luasnip.lsp_expand(args.body)
-            -- require("luasnip").lsp_expand(args.body)
           end,
         },
         window = {
@@ -58,7 +62,7 @@ return {
           end, { "i", "s" }),
           -- ["<C-Space>"] = cmp.mapping.complete(),
           -- ["<C-e>"] = cmp.mapping.abort(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+          ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
